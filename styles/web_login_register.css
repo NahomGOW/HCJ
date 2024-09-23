@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('../images/bg.jpg') no-repeat;
+  background-position: center;
+  color: white;
+  background-size: cover;
+}
+
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1{
+  font-size: 2rem;
+  color: white;
+}
+
+nav a{
+  text-decoration: none;
+  position: relative;
+  margin: 20px;
+  color: white;
+  font-size: 1.1em;
+  
+}
+
+nav a::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  left: 0;
+  bottom: -5px;
+  transform: scaleX(0);
+  transition: transform .3s;
+}
+
+nav a:hover::after{
+  transform: scaleX(1);
+}
+
+.loginButton{
+  height: 50px;
+  width: 130px;
+  border-radius: 6px;
+  background-color: transparent;
+  border: 2px solid white;
+  font-size: 1.1em;
+  color: white;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 500;
+  margin-left: 40px;
+  transition: .5s;
+}
+
+.loginButton:hover{
+  background:#fff;
+  color: #162938;
+}
+
+.wrapper{
+  position: relative;
+  width: 400px;
+  height: 440px;
+  border: 2px solid rgba(225, 225, 225, .5);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+  transition: height .5s;
+  overflow: hidden;
+  transition: transform .3s ease-in;
+  margin-top: 50px;
+}
+
+.wrapper.active-popup{
+  transform: scale(1);
+}
+
+.wrapper.active{
+  height: 500px;
+}
+
+
+.wrapper .form-box{
+  width: 100%;
+  padding: 40px;
+}
+
+.wrapper .form-box.login{
+  transition: transform .18s ease-in;
+  transform: translateX(0);
+}
+
+.wrapper.active .form-box.login{
+  transition: none;
+  transform: translateX(-400px);
+}
+
+.wrapper .form-box.Register{
+  position: absolute;
+  transition: none;
+  transform: translateX(400px);
+}
+
+.wrapper.active .form-box.Register{
+  transition: transform .18s ease;
+  transform: translateX(0);
+}
+
+.form-box h2{
+  font-size: 2em;
+  text-align: center;
+}
+
+.input-box{
+  position: relative;
+  width: 100%;
+  height: 50px;  
+  border-bottom: 2px solid white;
+  margin: 30px 0;
+}
+
+.input-box label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: white;
+  font-weight: 500;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+  top: -5px
+}
+
+.input-box input{
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 0 35px 0 5px;
+}
+
+.input-box .icon{
+  position: absolute;
+  right: 10px;
+  top: 60%;
+  transform: translateY(-50%);
+  font-size: 1.1em;
+  line-height:57px
+}
+
+.remember-forgot{
+  font-size: .9em;
+  color: white;
+  font-weight: 500;
+  margin: -15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.remember-forgot label input{
+  accent-color: #f80861;
+}
+
+.remember-forgot a{
+  color: white;
+  text-decoration: none;
+  
+}
+
+.remember-forgot a:hover{
+  color: #f80861;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.btn{
+  width: 100%;
+  height: 45px;
+  background-color: #0076f4;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  color: white;
+  font-weight: 500;
+
+}
+
+.login-register{
+  font-size: .9em;
+  color: white;
+  text-align: center;
+  font-weight: 500;
+  margin: 25px 0 10px; /* TOP right and left bottom*/
+
+}
+.login-register p a{
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-register p a:hover{
+  color: #f80861;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.icon-close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 35px;
+  background-color: #0076f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 17px;
+  border-bottom-left-radius: 17px;
+  font-size: x-large;
+  border: none;
+  outline: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  z-index: 1;
+}
+
+.icon-close:active{
+  opacity: 0.8;
+}

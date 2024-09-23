@@ -1,0 +1,88 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #222343;
+}
+h1{
+  color: yellowgreen;
+  font-family: Arial, Helvetica, sans-serif;
+}
+main{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container{
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.circle{
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-color: #151638;
+  box-shadow: 0 0 10px 1PX yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hour, .sec, .min{
+  font-size: 33px;
+  font-family: Arial, Helvetica, sans-serif;
+  color:white;
+}
+span{
+  font-size: 33px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: -4px;
+}
+
+.buttons{
+  width: 350PX;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.stop, .start, .reset{
+  width: 100px;
+  height: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  border-radius: 20px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  transition: box-shadow 0.2s ease-in, border 0.2s ease-in, background-color s ease-in;
+}
+
+.stop:hover, .start:hover, .reset:hover{
+  width: 100px;
+  height: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  background-color: #151638;
+  color: white;
+  border: none;
+  box-shadow: 0 0 5px 1PX yellow;
+}
+
+.stop:active, .start:active, .reset:active{
+  width: 100px;
+  height: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  background-color: #151638;
+  color: white;
+  border: none;
+  transform: scale(0.9);
+}

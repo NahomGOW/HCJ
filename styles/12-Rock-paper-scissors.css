@@ -1,0 +1,87 @@
+body{
+  background-color: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main{
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+.rock, .paper, .scissors{
+  height: 50px;
+  width: 50px;
+}
+
+.Mbutton{
+  border: dashed 2px white;
+  border-radius: 50%;
+  background-color: transparent;
+  text-align: center;
+  height: 120px;
+  width: 120px;
+  margin-left: 10px;
+  transition: border 0.2s;
+}
+.Mbutton:active{
+  cursor: pointer;
+  border: solid 2px orange;
+}
+.result{
+  font-size: large;
+  font-family: arial;
+  font-weight: bold;
+}
+
+.Cmoves{
+  width: 50px;
+  height: 50px;
+}
+.reset{
+  height: 40px;
+  width: 100px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+}
+.Obuttons{
+  width: 220PX;
+  display: flex;
+  justify-content: space-between;
+}
+.AutoPlay{
+  height: 40px;
+  width: 100px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  }
+
+  .reset:active, .AutoPlay:active{
+    transform: scale(0.9);
+  }
+
+  .message{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+  .not_showing{
+    opacity: 0;
+    pointer-events: none;
+  }
+ 
